@@ -1,7 +1,5 @@
-(ns  foo.main
-  (:require
-   [foo.aliased :as-alias al]))
+(ns foo.main)
 
 (defn -main
   [& _]
-  (prn #::al{:bar "a bar"}))
+  (println "This is -main"))

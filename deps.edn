@@ -1,0 +1,18 @@
+{:paths   ["src"]
+ :deps    {babashka/babashka.curl {:mvn/version "0.1.2"}
+           babashka/fs {:mvn/version "0.5.20"}
+           babashka/process {:mvn/version "0.5.21"}
+           buddy/buddy-sign {:mvn/version "3.5.351"}
+           com.rpl/specter {:mvn/version "1.1.4"}
+           hato/hato {:mvn/version "0.9.0"}
+           http-kit/http-kit {:mvn/version "2.6.0"}
+           org.babashka/http-client {:mvn/version "0.4.15"}
+           org.babashka/spec.alpha {:git/sha "951b49b8c173244e66443b8188e3ff928a0a71e7"
+                                    :git/url "https://github.com/babashka/spec.alpha"}
+           org.clojure/clojure {:exclusions  [org.clojure/spec.alpha org.clojure/core.specs.alpha]
+                                :mvn/version "1.11.1"}}
+ :aliases {:build    {:deps       {io.github.clojure/tools.build {:git/sha "8e78bcc"
+                                                                  :git/tag "v0.9.6"}}
+                      :ns-default build}
+           :outdated {:deps      {com.github.liquidz/antq {:mvn/version "RELEASE"}}
+                      :main-opts ["-m" "antq.core"]}}}
